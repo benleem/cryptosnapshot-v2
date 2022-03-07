@@ -1,0 +1,7 @@
+.coin{
+    padding-bottom: 1rem;
+}
+
+.coin:last-child{
+    padding-bottom: 0;
+}
