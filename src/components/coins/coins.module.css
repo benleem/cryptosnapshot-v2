@@ -6,7 +6,16 @@
 }
 
 .coinsContainer{
+    max-width: 1200px;
     width: 100%;
+    margin: auto;
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 0;
+}
+
+@media screen and (max-width: 1200px){
+    .coinsContainer{
+        padding-left: 3%;
+        padding-right: 3%;
+    }
 }
