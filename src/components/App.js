@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import Coins from "./coins/Coins"
+import Header from "./header/Header";
+import Coins from "./coins/Coins";
 
 const App = () => {
     const [coins, setCoins] = useState([]);
@@ -29,6 +30,7 @@ const App = () => {
     
     return (
         <div className="App">
+            <Header/>
             <Coins coins={coins}
             coinsLoading={coinsLoading}
             />

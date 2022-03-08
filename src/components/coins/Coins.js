@@ -5,7 +5,7 @@ import styles from './coins.module.css';
 const Coins = ({ coins, coinsLoading }) => {
     if(coinsLoading === true){
         return(
-            <p className={styles.coinsLoading}>Coins Loading</p>
+            <h2 className={styles.coinsLoading}>Loading...</h2>
         )
     }
     else{

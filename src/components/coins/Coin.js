@@ -4,7 +4,7 @@ const Coin = ({ coin }) => {
     return (
         <div className={styles.coin}>
             <img src={coin.image} alt="coin image"/>
-            <p className={styles.coinName}>{coin.name}</p>
+            <h3 className={styles.coinName}>{coin.name}</h3>
             <p className={styles.upperCase}>{coin.symbol}</p>
             <p>{coin.current_price}</p>
             <p className={coin.price_change_percentage_24h_in_currency > 0? styles.textGreen : styles.textRed}>
