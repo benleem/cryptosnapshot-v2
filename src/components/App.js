@@ -18,6 +18,7 @@ const App = () => {
             setCoinsLoading(false);
         } catch (err) {
             console.error(err);
+            setCoinsLoading(false);
         }
     };
 

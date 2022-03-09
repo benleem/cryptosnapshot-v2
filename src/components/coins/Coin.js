@@ -6,8 +6,8 @@ const Coin = ({ coin, setCoin }) => {
     return (
         <div className={styles.coin}>
             <img src={coin.image} alt="coin"/>
-            <Link className={styles.coinName} to={`coin-info/${coin.symbol}`}
-            onClick={() => setCoin(coin.symbol)}
+            <Link className={styles.coinName} to={`coin-info/${coin.id}`}
+            onClick={() => setCoin(coin.id)}
             >
                 {coin.name}
             </Link>
