@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Routes, Route } from "react-router";
 
-import Header from "./header/Header";
-import Coins from "./coins/Coins";
+import Home from "../pages/Home";
+import CoinPage from "../pages/CoinPage";
 
 const App = () => {
     const [coins, setCoins] = useState([]);
-    // const [coin, setCoin] = useState({})
+    const [coin, setCoin] = useState({})
     const [coinsLoading, setCoinsLoading] = useState(false);
 
     const loadCoins = async () => {
@@ -24,17 +25,11 @@ const App = () => {
         loadCoins();
     }, [])
     
-    useEffect(() => {
-        console.log(coins);
-    }, [coins])
-    
     return (
-        <div className="App">
-            <Header/>
-            <Coins coins={coins}
-            coinsLoading={coinsLoading}
-            />
-        </div>
+        <Routes>
+            <Route path="/" element={<Home coins={coins} coinsLoading={coinsLoading} setCoin={setCoin}/>} />
+            <Route path="coin-info/:id" element={<CoinPage coin={coin}/>} />
+        </Routes>
     )
 }
 

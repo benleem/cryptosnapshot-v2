@@ -1,10 +1,16 @@
+import { Link } from 'react-router-dom';
+
 import styles from './coin.module.css';
 
-const Coin = ({ coin }) => {
+const Coin = ({ coin, setCoin }) => {
     return (
         <div className={styles.coin}>
-            <img src={coin.image} alt="coin image"/>
-            <h3 className={styles.coinName}>{coin.name}</h3>
+            <img src={coin.image} alt="coin"/>
+            <Link className={styles.coinName} to={`coin-info/${coin.symbol}`}
+            onClick={() => setCoin(coin.symbol)}
+            >
+                {coin.name}
+            </Link>
             <p className={styles.upperCase}>{coin.symbol}</p>
             <p>{coin.current_price}</p>
             <p className={coin.price_change_percentage_24h_in_currency > 0? styles.textGreen : styles.textRed}>
