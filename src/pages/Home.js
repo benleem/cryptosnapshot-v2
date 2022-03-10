@@ -1,11 +1,11 @@
 import Header from '../components/header/Header.js'
 import Coins from '../components/coins/Coins.js'
 
-const Home = ({ coins, coinsLoading, setCoin }) => {
+const Home = ({ coins, coinsLoading }) => {
     return (
         <>
             <Header/>
-            <Coins coins={coins} coinsLoading={coinsLoading} setCoin={setCoin}/>
+            <Coins coins={coins} coinsLoading={coinsLoading}/>
         </>
     )
 }

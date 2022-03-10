@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Routes, Route } from "react-router";
+import { Routes, Route} from "react-router";
 
 import Home from "../pages/Home";
 import CoinPage from "../pages/CoinPage";
@@ -28,8 +28,8 @@ const App = () => {
     
     return (
         <Routes>
-            <Route path="/" element={<Home coins={coins} coinsLoading={coinsLoading} setCoin={setCoin}/>} />
-            <Route path="coin-info/:id" element={<CoinPage coin={coin}/>} />
+            <Route path="/" element={<Home coins={coins} coinsLoading={coinsLoading}/>} />
+            <Route path="coin-info/:id" element={<CoinPage/>} />
         </Routes>
     )
 }
