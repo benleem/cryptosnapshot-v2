@@ -31,8 +31,8 @@ const CoinPage = () => {
     }, [coinData])
     
     return (
-        <>
-            <CoinHeader coin={coinData}/>
+        <>  
+            {coinLoading ? <p style={{color: 'white'}}>Coin data loading...</p> : <CoinHeader coin={coinData} coinLoading={coinLoading}/>}
         </>
     )
 }
