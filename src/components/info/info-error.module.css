@@ -1,0 +1,19 @@
+.infoError{
+    height: 100vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 3%;
+}
+
+.infoError a {
+    color: #40bf7e;
+    text-decoration: none;
+    line-height: 1;
+    font-size: 1.5rem;
+}

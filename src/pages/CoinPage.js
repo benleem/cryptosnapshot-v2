@@ -4,6 +4,8 @@ import axios from "axios";
 
 import CoinHeader from '../components/info/CoinHeader.js';
 import CoinInfo from "../components/info/CoinInfo.js";
+import InfoLoading from "../components/info/InfoLoading.js";
+import InfoError from "../components/info/InfoError.js";
 
 const CoinPage = () => {
     var coinId = useLocation();
@@ -31,14 +33,14 @@ const CoinPage = () => {
 
     if (coinError === true) {
         return(
-            <p style={{color: 'white'}}>This coin doesnt exist</p>
+            <InfoError/>
         )
     }
     
     return (
         <>
             {coinLoading
-                ? <p style={{color: 'white'}}>Coin data loading...</p> 
+                ? <InfoLoading/>
                 : <>
                     <CoinHeader coin={coinData}/>
                 </>
