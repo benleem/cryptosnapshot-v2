@@ -6,10 +6,8 @@ import Home from "../pages/Home";
 import CoinPage from "../pages/CoinPage";
 
 const App = () => {
-    // testing something
-
     const [coins, setCoins] = useState([]);
-    const [coin, setCoin] = useState({})
+    const [coin, setCoin] = useState({});
     const [coinsLoading, setCoinsLoading] = useState(false);
 
     const loadCoins = async () => {

@@ -10,7 +10,7 @@ const Coin = ({ coin }) => {
                 {coin.name}
             </Link>
             <p className={styles.upperCase}>{coin.symbol}</p>
-            <p>{coin.current_price}</p>
+            <p>${coin.current_price}</p>
             <p className={coin.price_change_percentage_24h_in_currency > 0? styles.textGreen : styles.textRed}>
                 {Math.round(coin.price_change_percentage_24h_in_currency * 100) / 100}
             </p>
