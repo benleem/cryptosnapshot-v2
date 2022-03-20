@@ -1,13 +1,19 @@
-import Header from '../components/header/Header.js'
-import Coins from '../components/coins/Coins.js'
+import { useState, useEffect } from "react";
+
+import Header from "../components/header/Header.js";
+import SearchBar from "../components/search/SearchBar.js";
+import Coins from "../components/coins/Coins.js";
 
 const Home = ({ coins, coinsLoading }) => {
-    return (
-        <>
-            <Header/>
-            <Coins coins={coins} coinsLoading={coinsLoading}/>
-        </>
-    )
-}
+	const [searchInput, setSearchInput] = useState("");
 
-export default Home
+	return (
+		<>
+			<Header />
+			<SearchBar setSearchInput={setSearchInput} />
+			<Coins coinsLoading={coinsLoading} coins={coins} searchInput={searchInput} />
+		</>
+	);
+};
+
+export default Home;

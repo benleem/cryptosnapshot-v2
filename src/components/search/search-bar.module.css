@@ -1,0 +1,27 @@
+.searchBar {
+	background-color: #302e30;
+	width: fit-content;
+	margin: auto;
+	margin-top: 1rem;
+	margin-bottom: 5rem;
+	border-radius: 10px;
+}
+
+.searchBar img {
+	max-width: 25px;
+	vertical-align: middle;
+	text-align: center;
+	margin: 0 0.5rem;
+	padding-bottom: 4px;
+}
+
+.searchBar input {
+	color: white;
+	font-size: 1.1rem;
+	background: none;
+	padding: 0.5rem;
+	padding-left: 0;
+	border: none;
+	outline: none;
+	font-family: "Poppins", sans-serif;
+}

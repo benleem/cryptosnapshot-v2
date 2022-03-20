@@ -1,61 +1,61 @@
-.coinHeader{
-    color:white;
-    width: 100%;
-    max-width: 1200px;
-    width: 100%;
-    margin: auto;
-    font-family: 'Poppins', sans-serif;
-    line-height: 1;
-    padding-top: 2rem;
+.coinHeader {
+	color: white;
+	width: 100%;
+	max-width: 1200px;
+	width: 100%;
+	margin: auto;
+	font-family: "Poppins", sans-serif;
+	line-height: 1;
+	padding-top: 2rem;
 }
 
 /* Coin title container */
 
-.coinTitleContainer{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-family: 'Orbitron', sans-serif;
-    text-transform: uppercase;
-    padding: 0.5rem 0;
+.coinTitleContainer {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-family: "Orbitron", sans-serif;
+	text-transform: uppercase;
+	padding: 0.5rem 0;
 }
 
-.coinImg{
-    max-width: 25px;
-    margin-right: 0.5rem;
+.coinImg {
+	max-width: 25px;
+	margin-right: 0.5rem;
 }
 
 /* Price container */
 
-.priceContainer{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+.priceContainer {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
 }
 
-.currentPrice{
-    padding-right: 0.5rem;
+.currentPrice {
+	padding-right: 0.5rem;
 }
 
-.textGreen{
-    color: green;
+.textGreen {
+	color: green;
 }
 
-.textRed{
-    color: red;
+.textRed {
+	color: red;
 }
 
 /* Info container */
 
-.infoContainer p{
-    padding-top: 0.25rem;
+.infoContainer p {
+	padding-top: 0.25rem;
 }
 
 /* Media queries */
 
-@media screen and (max-width: 1200px){
-    .coinHeader{
-        padding-left: 3%;
-        padding-right: 3%;
-    }
+@media screen and (max-width: 1200px) {
+	.coinHeader {
+		padding-left: 3%;
+		padding-right: 3%;
+	}
 }
