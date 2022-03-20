@@ -18,7 +18,13 @@ const CoinHeader = ({ coin }) => {
 			</div>
 			<div className={styles.priceContainer}>
 				<p className={styles.currentPrice}>${coin.market_data?.current_price.usd}</p>
-				<p className={coin.market_data?.price_change_percentage_24h_in_currency.usd > 0 ? styles.textGreen : styles.textRed}>
+				<p
+					className={
+						coin.market_data?.price_change_percentage_24h_in_currency.usd > 0
+							? styles.textGreen
+							: styles.textRed
+					}
+				>
 					{Math.round(coin.market_data?.price_change_percentage_24h_in_currency.usd * 100) / 100}
 				</p>
 			</div>
