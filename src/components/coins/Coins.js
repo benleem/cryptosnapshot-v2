@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 
+import CoinsLegend from "./CoinsLegend";
 import Coin from "./Coin";
 
 import styles from "./coins.module.css";
@@ -16,7 +17,14 @@ const Coins = ({ coinsLoading, coins, searchInput }) => {
 		if (filteredCoins.length === 0) {
 			return <h2 className={styles.filterError}>We don't have this coin on record</h2>;
 		}
-		return filteredCoins.map((coin) => <Coin key={coin.id} coin={coin} />);
+		return (
+			<>
+				<CoinsLegend />
+				{filteredCoins.map((coin) => (
+					<Coin key={coin.id} coin={coin} />
+				))}
+			</>
+		);
 	};
 
 	return (
