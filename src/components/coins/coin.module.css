@@ -3,8 +3,6 @@
 	border-bottom: 1px solid grey;
 	color: grey;
 	display: flex;
-	align-items: center;
-	justify-content: flex-start;
 	overflow-y: scroll;
 }
 
@@ -12,46 +10,74 @@
 	background-color: #302e30;
 }
 
-.coin img {
-	max-width: 25px;
-	margin-right: 0.5rem;
-}
-
 .coin p {
-	margin-right: 2rem;
 	font-family: "Poppins", sans-serif;
-	height: min-content;
-	/* display: inline; */
-	line-height: 1rem;
 }
 
-.coin p:last-child {
-	margin-right: 0;
+/* Coin label */
+
+.coinLabel {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	/* width: 100%; */
+}
+
+.coinImg {
+	max-width: 25px;
+	margin: 0 1rem;
 }
 
 .coinName {
-	transition: box-shadow 0.2s ease-in-out;
 	cursor: pointer;
 	color: white;
 	font-weight: 500;
-	font-size: 1.1rem;
+	font-size: 1.05rem;
 	font-family: "Orbitron", sans-serif;
 	margin-right: 2rem;
 	text-decoration: none;
+	width: 150px;
+	text-align: start;
 }
 
-.coinName:hover {
-	box-shadow: 0px 2px 0px white;
+.coinSymbol {
+	text-transform: uppercase;
+	width: 100px;
+	text-align: start;
+}
+
+/* Coin stats */
+
+.coinStats {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	/* background-color: antiquewhite; */
+	width: 100%;
+}
+
+.coinStats p {
+	margin-left: 0.5rem;
+}
+
+.coinCap {
+	margin-right: 1rem;
+}
+
+.coinCap,
+.coinVolume {
+	width: 150px;
+	text-align: end;
 }
 
 .textGreen {
 	color: green;
+	width: 75px;
+	text-align: end;
 }
 
 .textRed {
+	width: 75px;
 	color: red;
-}
-
-.upperCase {
-	text-transform: uppercase;
+	text-align: end;
 }

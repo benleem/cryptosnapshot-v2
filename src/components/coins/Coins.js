@@ -14,7 +14,7 @@ const Coins = ({ coinsLoading, coins, searchInput }) => {
 			);
 		});
 		if (filteredCoins.length === 0) {
-			return <h2 className={styles.filterError}>We dont have this coin on record</h2>;
+			return <h2 className={styles.filterError}>We don't have this coin on record</h2>;
 		}
 		return filteredCoins.map((coin) => <Coin key={coin.id} coin={coin} />);
 	};
