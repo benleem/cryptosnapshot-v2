@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 import CoinsLegend from "./CoinsLegend";
 import Coin from "./Coin";
 

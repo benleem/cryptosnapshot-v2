@@ -1,12 +1,6 @@
-import { useEffect } from "react";
+import styles from "./coin-info-header.module.css";
 
-import styles from "./coin-header.module.css";
-
-const CoinHeader = ({ coin }) => {
-	useEffect(() => {
-		console.log(coin);
-	}, []);
-
+const CoinInfoHeader = ({ coin }) => {
 	return (
 		<div className={styles.coinHeader}>
 			<p>Rank #{coin.market_cap_rank}</p>
@@ -36,4 +30,4 @@ const CoinHeader = ({ coin }) => {
 	);
 };
 
-export default CoinHeader;
+export default CoinInfoHeader;
