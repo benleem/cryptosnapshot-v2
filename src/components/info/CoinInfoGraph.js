@@ -19,16 +19,55 @@ const CoinInfoGraph = ({ graphData }) => {
 		<div className={styles.chartContainer}>
 			<Line
 				options={{
+					maintainAspectRatio: true,
 					responsive: true,
 					elements: {
 						point: {
-							radius: 1,
+							pointRadius: 1,
+							hitRadius: 4,
 						},
 					},
 					plugins: {
 						tooltip: {
 							mode: "index",
 							intersect: false,
+							bodyFont: {
+								size: 12,
+								family: "'Poppins', sans-serif",
+							},
+							titleFont: {
+								size: 12,
+								family: "'Poppins', sans-serif",
+							},
+						},
+						legend: {
+							labels: {
+								color: "white",
+								font: {
+									size: 14,
+									family: "'Poppins', sans-serif",
+								},
+							},
+						},
+					},
+					scales: {
+						x: {
+							ticks: {
+								color: "white",
+								font: {
+									family: "'Poppins', sans-serif",
+									size: 10,
+								},
+							},
+						},
+						y: {
+							ticks: {
+								color: "white",
+								font: {
+									family: "'Poppins', sans-serif",
+									size: 10,
+								},
+							},
 						},
 					},
 				}}
