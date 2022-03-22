@@ -12,13 +12,14 @@ const CoinPage = () => {
 	coinId = coinId.pathname.replace("/coin-info/", "");
 	const [coinCardData, setCoinCardData] = useState({});
 	const [coinGraphData, setCoinGraphData] = useState([]);
+	const [graphRange, setGraphRange] = useState("1");
 	const [coinLoading, setCoinLoading] = useState(false);
 	const [coinError, setCoinError] = useState(false);
 
 	const getCoinData = async () => {
 		const endpoints = [
 			`https://api.coingecko.com/api/v3/coins/${coinId}?tickers=true&market_data=true&community_data=true&developer_data=false&sparkline=true`,
-			`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=1`,
+			`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=${graphRange}`,
 		];
 		try {
 			setCoinLoading(true);
@@ -34,7 +35,7 @@ const CoinPage = () => {
 
 	useEffect(() => {
 		getCoinData();
-	}, []);
+	}, [graphRange]);
 
 	const displayCoinInfo = () => {
 		if (coinError === true) {
@@ -43,7 +44,11 @@ const CoinPage = () => {
 		return (
 			<>
 				<CoinInfoHeader coin={coinCardData} />
-				<CoinInfoGraph graphData={coinGraphData} />
+				<CoinInfoGraph
+					graphData={coinGraphData}
+					graphRange={graphRange}
+					setGraphRange={setGraphRange}
+				/>
 			</>
 		);
 	};

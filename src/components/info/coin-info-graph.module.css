@@ -2,12 +2,68 @@
 	width: 100%;
 	max-width: 1200px;
 	margin: auto;
+	padding-bottom: 2rem;
+}
+
+.changeRangeContainer {
+	padding: 1.5rem 0;
+	background-color: #302e30;
+	width: 100%;
+	text-align: center;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+/* .changeRangeContainer button {
+	margin-left: 2rem;
+	padding: 0.3rem 1rem;
+	font-size: 1.1rem;
+	font-family: "Orbitron", sans-serif;
+	border-radius: 500px;
+	border: 2px solid #a2f5c8;
+	background: none;
+	color: white;
+	cursor: pointer;
+} */
+
+.active,
+.inactive {
+	margin-left: 2rem;
+	padding: 0.3rem 1rem;
+	font-size: 1.1rem;
+	font-family: "Orbitron", sans-serif;
+	border-radius: 500px;
+	border: 2px solid #a2f5c8;
+	background: none;
+	color: white;
+	cursor: pointer;
+}
+
+.active {
+	background-color: #41be7d;
+	color: black;
+}
+
+.inactive {
+	background-color: none;
+}
+
+.changeRangeContainer button:first-child {
+	margin-left: 0;
+}
+
+.changeRangeContainer button:hover {
+	color: black;
+	background-color: #41be7d;
 }
 
 canvas {
 	background-color: #302e30;
 	border-radius: 15px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
 	padding: 0.5rem;
+	padding-top: 0;
 }
 
 @media screen and (max-width: 1200px) {

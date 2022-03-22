@@ -14,9 +14,41 @@ import styles from "./coin-info-graph.module.css";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-const CoinInfoGraph = ({ graphData }) => {
+const CoinInfoGraph = ({ graphData, graphRange, setGraphRange }) => {
 	return (
 		<div className={styles.chartContainer}>
+			<div className={styles.changeRangeContainer}>
+				<button
+					className={graphRange === "1" ? styles.active : styles.inactive}
+					onClick={() => setGraphRange("1")}
+				>
+					1d
+				</button>
+				<button
+					className={graphRange === "7" ? styles.active : styles.inactive}
+					onClick={() => setGraphRange("7")}
+				>
+					7d
+				</button>
+				<button
+					className={graphRange === "30" ? styles.active : styles.inactive}
+					onClick={() => setGraphRange("30")}
+				>
+					30d
+				</button>
+				<button
+					className={graphRange === "365" ? styles.active : styles.inactive}
+					onClick={() => setGraphRange("365")}
+				>
+					1y
+				</button>
+				<button
+					className={graphRange === "max" ? styles.active : styles.inactive}
+					onClick={() => setGraphRange("max")}
+				>
+					Max
+				</button>
+			</div>
 			<Line
 				options={{
 					maintainAspectRatio: true,
@@ -48,7 +80,7 @@ const CoinInfoGraph = ({ graphData }) => {
 							labels: {
 								color: "white",
 								font: {
-									size: 14,
+									size: 16,
 									family: "'Poppins', sans-serif",
 								},
 							},
@@ -60,7 +92,7 @@ const CoinInfoGraph = ({ graphData }) => {
 								color: "white",
 								font: {
 									family: "'Poppins', sans-serif",
-									size: 10,
+									size: 11,
 								},
 							},
 						},
@@ -69,7 +101,7 @@ const CoinInfoGraph = ({ graphData }) => {
 								color: "white",
 								font: {
 									family: "'Poppins', sans-serif",
-									size: 10,
+									size: 14,
 								},
 							},
 						},
