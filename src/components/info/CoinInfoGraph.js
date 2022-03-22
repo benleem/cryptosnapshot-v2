@@ -24,8 +24,12 @@ const CoinInfoGraph = ({ graphData }) => {
 					elements: {
 						point: {
 							pointRadius: 1,
-							hitRadius: 4,
+							hoverRadius: 5,
 						},
+					},
+					hover: {
+						mode: "index",
+						intersect: false,
 					},
 					plugins: {
 						tooltip: {
