@@ -35,7 +35,7 @@ const CoinPage = ({ coins }) => {
 				params: { q: "crypto", lang: "en", page: "1", page_size: "9" },
 				headers: {
 					"X-RapidAPI-Host": "free-news.p.rapidapi.com",
-					"X-RapidAPI-Key": "e0512b8d2amshe716fecaf241f0bp1e8cfajsnd69321534dab",
+					"X-RapidAPI-Key": process.env.REACT_APP_NEWS_KEY,
 				},
 			},
 		];
