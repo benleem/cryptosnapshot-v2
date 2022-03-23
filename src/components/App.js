@@ -3,7 +3,7 @@ import axios from "axios";
 import { Routes, Route } from "react-router";
 
 import Home from "../pages/Home";
-import CoinPage from "../pages/CoinPage";
+import Info from "../pages/Info";
 
 const App = () => {
 	const [coins, setCoins] = useState([]);
@@ -30,7 +30,7 @@ const App = () => {
 	return (
 		<Routes>
 			<Route path="/" element={<Home coins={coins} coinsLoading={coinsLoading} />} />
-			<Route path="coin-info/:id" element={<CoinPage />} />
+			<Route path="coin-info/:id" element={<Info coins={coins} />} />
 		</Routes>
 	);
 };

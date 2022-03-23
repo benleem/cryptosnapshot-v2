@@ -1,0 +1,89 @@
+.coinInfoNewsCard {
+	color: white;
+	overflow: hidden;
+	border-radius: 15px;
+	height: 500px;
+	width: 100%;
+	font-family: "Poppins", sans-serif;
+}
+
+.imgContainer {
+	overflow: hidden;
+	height: 200px;
+	width: 100%;
+}
+
+.imgContainer img {
+	max-width: 100%;
+}
+
+.detailsContainer {
+	background-color: #302e30;
+	height: 300px;
+	width: 100%;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	color: white;
+}
+
+.topHalf {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: hidden;
+}
+
+.detailsContainer p {
+	text-decoration: none;
+	display: inline-block;
+	box-sizing: border-box;
+}
+
+.topic {
+	color: #41be7d;
+	text-transform: capitalize;
+	line-height: 0.9rem;
+	font-size: 0.9rem;
+	font-weight: 500;
+}
+
+.link {
+	text-decoration: none;
+	color: white;
+	display: inline-block;
+	font-size: 1.1rem;
+	font-weight: 600;
+	box-sizing: border-box;
+	padding: 1rem 0;
+}
+
+.summary {
+	color: #a9a9a9;
+	font-size: 0.8rem;
+	font-weight: 300;
+	line-height: 1.6rem;
+	overflow: scroll;
+}
+
+.bottomHalf {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.bottomHalf p {
+	line-height: 0.9rem;
+}
+
+.publisher {
+	font-size: 0.9rem;
+	padding-top: 1.5rem;
+}
+
+.publisherDate {
+	padding-top: 0.5rem;
+	font-size: 0.9rem;
+	color: #a9a9a9;
+}

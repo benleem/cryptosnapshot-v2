@@ -2,7 +2,6 @@
 	width: 100%;
 	max-width: 1200px;
 	margin: auto;
-	padding-bottom: 2rem;
 }
 
 .changeRangeContainer {
@@ -14,29 +13,18 @@
 	border-top-right-radius: 15px;
 }
 
-/* .changeRangeContainer button {
-	margin-left: 2rem;
-	padding: 0.3rem 1rem;
-	font-size: 1.1rem;
-	font-family: "Orbitron", sans-serif;
-	border-radius: 500px;
-	border: 2px solid #a2f5c8;
-	background: none;
-	color: white;
-	cursor: pointer;
-} */
-
 .active,
 .inactive {
 	margin-left: 2rem;
 	padding: 0.3rem 1rem;
-	font-size: 1.1rem;
-	font-family: "Orbitron", sans-serif;
+	font-size: 0.8rem;
+	font-family: "Poppins", sans-serif;
 	border-radius: 500px;
 	border: 2px solid #a2f5c8;
 	background: none;
 	color: white;
 	cursor: pointer;
+	transition: all 0.3s ease-in-out;
 }
 
 .active {
